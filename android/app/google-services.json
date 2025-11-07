@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "511919823077",
+    "project_id": "inventory-app-ana",
+    "storage_bucket": "inventory-app-ana.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511919823077:android:dd546834e8b9dfdec0dc0c",
+        "android_client_info": {
+          "package_name": "com.example.inclass15"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4PL6mDYE_Q2i3mFvB2GnvmPnABQu5f9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
