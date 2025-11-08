@@ -31,7 +31,7 @@ class Item {
     return Item(
       id: id,
       name: map['name'] ?? '',
-      quantity: map['quantity'] ?? 0,
+      quantity: (map['quantity'] ?? 0).toInt(),
       price: (map['price'] ?? 0.0).toDouble(),
       category: map['category'] ?? '',
       createdAt: (map['createdAt'] as Timestamp).toDate(),
@@ -55,4 +55,8 @@ class Item {
       createdAt: createdAt ?? this.createdAt,
     );
   }
+
+  double get totalValue => quantity * price;
+  bool get isLowStock => quantity <= 5;
+  bool get isOutOfStock => quantity == 0;
 }
