@@ -14,7 +14,7 @@ class FirestoreService {
     }
   }
 
-  // READ - Real-time stream
+  // READ
   Stream<List<Item>> getItemsStream() {
     return itemsCollection
         .orderBy('createdAt', descending: true)
@@ -43,7 +43,7 @@ class FirestoreService {
     }
   }
 
-  // Enhanced Feature 1: Search
+  //Search feature
   Stream<List<Item>> searchItems(String query) {
     return itemsCollection
         .orderBy('name')
@@ -54,7 +54,7 @@ class FirestoreService {
             .toList());
   }
 
-  // Enhanced Feature 1: Filter by category
+  //Filter feature
   Stream<List<Item>> getItemsByCategory(String category) {
     if (category == 'All') {
       return getItemsStream();
@@ -68,7 +68,7 @@ class FirestoreService {
             .toList());
   }
 
-  // Enhanced Feature 2: Get dashboard statistics
+  //Get dashboard statistics
   Stream<Map<String, dynamic>> getDashboardStats() {
     return itemsCollection.snapshots().map((snapshot) {
       final items = snapshot.docs
